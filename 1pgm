@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Student Info
+    </title>
+    <head>
+        <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script>
+            var app=angular.module("myApp",[]);
+            app.controller("myCntrl",function($scope){
+                $scope.firstName="Harish Kuamr"
+                $scope.lastName="B T"
+            });
+        </script>
+    </head>
+    <body ng-app="myApp">
+        <h2>Application to display full name</h2>
+        <div ng-controller="myCntrl">
+            Enter f name:<input type="text"ng-model="firstName"><br/>
+            Enter l name:<input type="text"ng-model="lastName"><br/>
+            Your full name is:{{firstName+""+lastName}}
+        </div>
+    </body>
+</html>
